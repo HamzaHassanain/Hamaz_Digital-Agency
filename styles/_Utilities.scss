@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+::-moz-selection {
+  background: $main_color;
+}
+::selection {
+  background: $main_color;
+}
+::-moz-selection {
+  background: $main_color;
+}
+body {
+  font-family: $font_family;
+  color: $text_color;
+  overflow-x: hidden;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: $text-color;
+}
+
+.bold {
+  font-weight: 900;
+}
+.semi-bold {
+  font-weight: 700;
+}
+.regular {
+  font-weight: normal;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+.bg-theme {
+  background: $main_color;
+}
+.text-theme {
+  background: $text_color;
+}
+.text-sub {
+  color: $sub_color;
+}
+.border {
+  border-radius: 5px;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+}
+.img-width {
+  width: 100%;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.section-head {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 2rem;
+  text-align: center;
+  h1 {
+    font-size: 2.4rem;
+  }
+  @media (max-width: 1024px) {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 2rem;
+    text-align: center;
+    h1 {
+      font-size: 2rem;
+    }
+  }
+  @media (max-width: 600px) {
+    .section-head {
+      width: 95%;
+      margin: auto;
+      margin-bottom: 2rem;
+      text-align: center;
+      h1 {
+        font-size: 1.7rem;
+      }
+      p {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+.btn {
+  border: 2px solid $main_color;
+  background-color: $main_color;
+  transition: 0.4s;
+  &:hover {
+    color: $main_color;
+    background: $sub_color;
+  }
+}
+.btn-inverted {
+  border: 2px solid $sub_color;
+  transition: 0.4s;
+
+  &:hover {
+    color: $sub_color !important;
+    background: $main_color;
+  }
+}
+.flex-space-between {
+  justify-content: space-between;
+}
+.flex-space-between {
+  justify-content: space-between;
+}
+.flex-flex-start {
+  justify-content: flex-start;
+}
+.flex-row {
+  flex-direction: row;
+}
+
+@media (max-width: 1024px) {
+  .flex-column-1024 {
+    flex-direction: column;
+  }
+}
