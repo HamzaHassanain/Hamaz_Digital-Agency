@@ -44,15 +44,25 @@ a {
   background: $main_color;
 }
 .text-theme {
-  background: $text_color;
+  color: $text_color;
 }
 .text-sub {
   color: $sub_color;
 }
 .border {
-  border-radius: 5px;
-  border-top-right-radius: 40px;
-  border-bottom-left-radius: 40px;
+  border-radius: 25px;
+  border-top-right-radius: 80px;
+  border-bottom-left-radius: 80px;
+}
+.border-2 {
+  border-radius: 50px;
+  border-top-right-radius: 200px;
+  border-bottom-left-radius: 200px;
+  transition: 0.4s;
+  &:hover {
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+  }
 }
 .img-width {
   width: 100%;
@@ -97,6 +107,8 @@ a {
   }
 }
 .btn {
+  padding: 0.7rem 1.8rem;
+
   border: 2px solid $main_color;
   background-color: $main_color;
   transition: 0.4s;
