@@ -15,7 +15,6 @@
 body {
   font-family: $font_family;
   color: $text_color;
-  overflow-x: hidden;
 }
 ul {
   list-style: none;
@@ -24,7 +23,12 @@ a {
   text-decoration: none;
   color: $text-color;
 }
-
+h1 {
+  text-shadow: 2px 2px 5px $text_color;
+}
+p {
+  text-shadow: 2px 2px 5px $text_color;
+}
 .bold {
   font-weight: 900;
 }
@@ -107,10 +111,15 @@ a {
   }
 }
 .btn {
+  cursor: pointer;
   padding: 0.7rem 1.8rem;
-
   border: 2px solid $main_color;
   background-color: $main_color;
+  box-shadow: 0px -1px 3px 0px $main_color;
+  -webkit-box-shadow: 0px -1px 3px 0px $main_color;
+  -moz-box-shadow: 0px -1px 3px 0px $main_color;
+  text-shadow: 1px 1px 7px $sub_color;
+
   transition: 0.4s;
   &:hover {
     color: $main_color;

@@ -1,0 +1,64 @@
+.call-to-action {
+  width: 50%;
+  margin: 4rem auto;
+  text-align: center;
+  p {
+    font-size: 1.2rem;
+  }
+  form.signup {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    input,
+    button {
+      outline: none;
+      font-size: 1.2rem;
+      margin-top: 2rem;
+    }
+    button {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+    input {
+      width: 100%;
+      background-color: $sub_color;
+      cursor: text;
+      &:hover {
+        color: $text_color;
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    width: 70%;
+    p {
+      font-size: 1rem;
+    }
+    input,
+    button {
+      outline: none;
+      font-size: 1rem;
+      margin-top: 2rem;
+    }
+  }
+  @media (max-width: 520px) {
+    width: 95%;
+    h1 {
+      font-size: 1rem;
+    }
+    p {
+      font-size: 0.8rem;
+    }
+    input,
+    button {
+      outline: none;
+      padding: 0.4rem 0.8rem;
+      font-size: 0.6rem;
+      margin-top: 2rem;
+    }
+  }
+}

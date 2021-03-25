@@ -7,6 +7,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 2rem;
+    .blog-item {
+      opacity: 1;
+      transition: 1s;
+      &.hide {
+        transform: translateY(150px);
+        opacity: 0;
+      }
+    }
     h1 {
       font-size: 1.8rem;
     }

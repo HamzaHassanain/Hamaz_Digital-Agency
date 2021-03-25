@@ -1,5 +1,5 @@
 .pricing {
-  width: 60%;
+  width: 65%;
   margin: 3rem auto;
   .prices {
     display: grid;
@@ -10,6 +10,13 @@
     font-weight: 100;
 
     .item {
+      opacity: 1;
+      transition: 0.7s ease-in;
+      transform: translateY(0);
+      &.hide {
+        opacity: 0;
+        transform: translateY(300px);
+      }
       width: 100%;
 
       padding: 1.3rem;
@@ -21,6 +28,7 @@
         font-size: 1.3rem;
         padding-bottom: 1rem;
         font-weight: 100;
+        text-shadow: 1px 1px 5px $sub_color;
       }
       .price {
         font-weight: 100;
@@ -70,6 +78,8 @@
         h1 {
           font-size: 1.7rem;
         }
+        transition: 1s;
+        transition-delay: 0.4s;
       }
       .price-button {
         background-color: rgb(255, 217, 0);
@@ -85,7 +95,7 @@
     }
   }
   @media (max-width: 1280px) {
-    width: 80%;
+    width: 85%;
   }
   @media (max-width: 1024px) {
     width: 90%;

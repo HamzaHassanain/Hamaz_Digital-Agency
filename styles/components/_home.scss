@@ -1,5 +1,8 @@
 .home {
+  overflow: hidden;
+  padding-left: 1rem;
   margin: 4rem auto;
+
   margin-top: 8rem;
   width: 70%;
   p {
@@ -10,12 +13,12 @@
       animation: home-text;
       opacity: 0;
       animation-fill-mode: forwards;
-      animation-duration: 2.5s;
+      animation-duration: 1.5s;
       p {
         opacity: 0;
         animation: home-text-p;
         animation-fill-mode: forwards;
-        animation-duration: 2.4s;
+        animation-duration: 1.4s;
         animation-delay: 1s;
       }
     }
@@ -41,8 +44,8 @@
       opacity: 0;
       animation: home-text-btn;
       animation-fill-mode: forwards;
-      animation-duration: 3s;
-      animation-delay: 3s;
+      animation-duration: 1s;
+      animation-delay: 1.5s;
       font-size: 1.8rem;
     }
   }
