@@ -4,7 +4,33 @@ header {
   left: 0;
   z-index: 100;
   width: 100%;
-  background: $sub_color;
+  transition: 0.4s;
+  &:not(.home-header) {
+    .menu-link,
+    .menu-item {
+      color: $sub_color;
+    }
+
+    &.active {
+      background: $sub_color;
+      .navbar {
+        .menu-toggler {
+          .bar {
+            background: $text_color;
+          }
+        }
+        .menu-link,
+        .menu-item {
+          color: $text_color;
+        }
+        .menu-item {
+          &:hover .menu-link {
+            color: $sub_color;
+          }
+        }
+      }
+    }
+  }
   .navbar {
     .menu-toggler {
       .bar {
@@ -39,7 +65,7 @@ header {
     }
     width: 90%;
     margin: 1rem auto;
-    background-color: $sub_color;
+    // background-color: $sub_color;
     .nav-menu {
       .menu-item {
         padding: 0.5rem 1.5rem;
@@ -91,6 +117,9 @@ header {
     .menu-item {
       background: none;
     }
+    .menu-link {
+      color: $sub_color !important;
+    }
   }
   @media (max-width: 1440px) {
     .navbar {
@@ -114,6 +143,16 @@ header {
     }
   }
   @media (max-width: 1024px) {
+    .menu-link,
+    .menu-item {
+      color: $text_color;
+    }
+    &.active {
+      .menu-link,
+      .menu-item {
+        color: $text_color;
+      }
+    }
     .navbar {
       .menu-toggler {
         display: inline;
@@ -168,7 +207,7 @@ header {
           background: none;
           .menu-item {
             .menu-link {
-              color: $sub_color;
+              color: $sub_color !important;
             }
             background: none;
           }

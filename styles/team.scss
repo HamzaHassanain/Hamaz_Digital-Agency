@@ -1,0 +1,104 @@
+@import "./Vars";
+@import "./Utilities";
+@import "./components/header";
+.welcome {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   text-align: center;
+  padding-top: 10rem;
+  width: 100%;
+  min-height: 40vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.589), rgba(0, 0, 0, 0.575)),
+    url("../images/bg5.jpg") center center fixed;
+  .section-head {
+    h1 {
+      font-size: 2.6rem;
+    }
+    h3 {
+      padding-bottom: 2rem;
+      font-size: 1.4rem;
+    }
+    width: 60%;
+    margin: auto;
+  }
+  @media (max-height: 1000px) {
+    min-height: 70vh;
+  }
+  @media (max-height: 600px) {
+    min-height: 110vh;
+  }
+  @media (max-width: 1280px) {
+    .section-head {
+      h1 {
+        font-size: 2.2rem;
+      }
+      h3 {
+        padding-bottom: 2rem;
+        font-size: 1.5rem;
+      }
+      width: 80%;
+    }
+  }
+  @media (max-width: 680px) {
+    .section-head {
+      h1 {
+        font-size: 2rem;
+      }
+      width: 90%;
+    }
+  }
+  @media (max-width: 480px) {
+    min-height: 65vh;
+    padding-top: 8rem;
+  }
+  @media (max-height: 480px) {
+    min-height: 120vh;
+  }
+}
+.team-memebers {
+  font-size: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  width: 80%;
+  margin: 6rem auto;
+  text-align: center;
+  .item {
+    padding: 2rem;
+    opacity: 1;
+    transition: 0.4s;
+    transform: translateY(0);
+    &.hide {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+  }
+  img {
+    border-radius: 100%;
+    margin-bottom: 0.6rem;
+  }
+  p {
+    padding-top: 0.5rem;
+    text-align: left;
+  }
+  .links {
+    a {
+      color: $sub_color;
+    }
+    width: 60%;
+    margin: 0.6rem auto;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+}
+@import "./components/call_to_action";
+@import "./components/footer";

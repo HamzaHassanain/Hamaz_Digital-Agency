@@ -78,6 +78,7 @@ p {
 }
 
 .border-2 {
+  overflow: hidden;
   border-radius: 50px;
   border-top-right-radius: 200px;
   border-bottom-left-radius: 200px;
@@ -217,13 +218,35 @@ header {
   left: 0;
   z-index: 100;
   width: 100%;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+header:not(.home-header) .menu-link,
+header:not(.home-header) .menu-item {
+  color: white;
+}
+
+header:not(.home-header).active {
   background: white;
+}
+
+header:not(.home-header).active .navbar .menu-toggler .bar {
+  background: #345057;
+}
+
+header:not(.home-header).active .navbar .menu-link,
+header:not(.home-header).active .navbar .menu-item {
+  color: #345057;
+}
+
+header:not(.home-header).active .navbar .menu-item:hover .menu-link {
+  color: white;
 }
 
 header .navbar {
   width: 90%;
   margin: 1rem auto;
-  background-color: white;
 }
 
 header .navbar .menu-toggler {
@@ -326,6 +349,10 @@ header .dropdown-menu .menu-item {
   background: none;
 }
 
+header .dropdown-menu .menu-link {
+  color: white !important;
+}
+
 @media (max-width: 1440px) {
   header .navbar {
     width: 95%;
@@ -347,6 +374,14 @@ header .dropdown-menu .menu-item {
 }
 
 @media (max-width: 1024px) {
+  header .menu-link,
+  header .menu-item {
+    color: #345057;
+  }
+  header.active .menu-link,
+  header.active .menu-item {
+    color: #345057;
+  }
   header .navbar .menu-toggler {
     display: inline;
   }
@@ -402,7 +437,7 @@ header .dropdown-menu .menu-item {
     background: none;
   }
   header .navbar .nav-menu .dropdown-menu .menu-item .menu-link {
-    color: white;
+    color: white !important;
   }
   header .navbar .nav-menu .active {
     color: white !important;
@@ -1768,16 +1803,16 @@ header .dropdown-menu .menu-item {
     width: 95%;
   }
   .call-to-action h1 {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
   .call-to-action p {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .call-to-action input,
   .call-to-action button {
     outline: none;
-    padding: 0.5rem 0.8rem;
-    font-size: 0.4rem;
+    padding: 0.8rem 1.2rem;
+    font-size: 0.8rem;
     margin-top: 2rem;
   }
 }

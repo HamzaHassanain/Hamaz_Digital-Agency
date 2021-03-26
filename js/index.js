@@ -1,6 +1,10 @@
+const header = document.querySelector("header:not(.home-header)")
 const menu = document.querySelector(".nav-menu")
 const toggler = document.querySelector(".menu-toggler")
 
+
+
+console.log(header);
 toggler.addEventListener("click" , e => {
     menu.classList.toggle("active")
     toggler.classList.toggle("active")
@@ -11,7 +15,15 @@ document.querySelector(".dropdown-openner").addEventListener("click" , e => {
     console.log( document.querySelector(".dropdown-openner").className ,  1,document.querySelector(".dropdown-menu").className);
 })
 
+
+
 window.addEventListener("scroll" , e => {
+    if(window.scrollY > 200) {
+      header.classList.add("active")
+    }
+    if(window.scrollY < 200) {
+       header.classList.remove("active")
+    }
     const items = document.querySelectorAll(".hide")    
     items.forEach(item => {
         let pos = item.getBoundingClientRect().top
@@ -42,7 +54,7 @@ faq_items.forEach(item => {
 
 
 //testemonial sliders
-      const slides_container = document.querySelector(".testemonials-slider");
+        const slides_container = document.querySelector(".testemonials-slider");
         const arrows = document.querySelectorAll(".testemonials .arrow");
         const items = document.querySelectorAll(".testemonials .slides li.slide-item");
 
