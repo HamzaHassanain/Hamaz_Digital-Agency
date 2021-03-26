@@ -11,48 +11,6 @@ document.querySelector(".dropdown-openner").addEventListener("click" , e => {
     console.log( document.querySelector(".dropdown-openner").className ,  1,document.querySelector(".dropdown-menu").className);
 })
 
-//animations
-// var scroll = window.requestAnimationFrame ||
-//              // IE Fallback
-//              function(callback){ window.setTimeout(callback, 1000/60)};
-// var elementsToShow = document.querySelectorAll('.show'); 
-
-// function loop() {
-
-//     Array.prototype.forEach.call(elementsToShow, function(element){
-//       if (isElementInViewport(element)) {
-//         element.classList.add('is-visible');
-//         console.log("show");
-//     } else {
-//         element.classList.remove('is-visible');
-//         console.log("hoode");
-//       }
-//     });
-
-//     scroll(loop);
-// }
-
-// // Call the loop for the first time
-// loop();
-
-// // Helper function from: http://stackoverflow.com/a/7557433/274826
-// function isElementInViewport(el) {
-//   // special bonus for those using jQuery
-//   if (typeof jQuery === "function" && el instanceof jQuery) {
-//     el = el[0];
-//   }
-//   var rect = el.getBoundingClientRect();
-//   return (
-//     (rect.top <= 0
-//       && rect.bottom >= 0)
-//     ||
-//     (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
-//       rect.top <= (window.innerHeight || document.documentElement.clientHeight))
-//     ||
-//     (rect.top >= 0 &&
-//       rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
-//   );
-// }
 window.addEventListener("scroll" , e => {
     const items = document.querySelectorAll(".hide")    
     items.forEach(item => {
@@ -81,3 +39,41 @@ faq_items.forEach(item => {
 
 
 
+
+
+//testemonial sliders
+      const slides_container = document.querySelector(".testemonials-slider");
+        const arrows = document.querySelectorAll(".testemonials .arrow");
+        const items = document.querySelectorAll(".testemonials .slides li.slide-item");
+
+        // let centralIndex = Math.floor(items.length / 2);
+        let activeItemIndex = Math.floor(items.length / 2);
+        items[activeItemIndex].classList.add("active")
+
+
+        let TransformSize = 40;
+        if(window.innerWidth <= 1024) TransformSize = 60
+        if(window.innerWidth <= 780) TransformSize = 90
+        let currentTansform = 0;
+        let LastTrnasform = 0;
+        arrows[0].addEventListener("click" , e => HandleArrowClick(-1 , 1) );
+        arrows[1].addEventListener("click" , e => HandleArrowClick(1 , -1) );
+
+        function HandleArrowClick(indexDir , trnasformDir) {
+
+            if(activeItemIndex + indexDir > items.length - 1) return;
+            if(activeItemIndex + indexDir < 0) return;
+
+            items.forEach(item => {
+                item.classList.remove("active");
+            })
+            console.log(TransformSize);
+            activeItemIndex += indexDir;
+            currentTansform = trnasformDir * TransformSize;
+            LastTrnasform += currentTansform;
+            slides_container.style.transform = `translate(${LastTrnasform}vw)`;
+
+            console.log("TRANSFORM:" ,LastTrnasform);
+            
+            items[activeItemIndex].classList.add("active")
+        }

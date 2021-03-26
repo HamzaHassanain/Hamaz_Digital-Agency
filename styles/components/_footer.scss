@@ -5,9 +5,10 @@ footer {
     color: $sub_color !important;
   }
   .footer-container {
-    width: 70%;
+    width: 80%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1rem;
     justify-content: center;
     align-items: flex-start;
     margin: auto;

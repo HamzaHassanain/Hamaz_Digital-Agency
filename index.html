@@ -14,7 +14,6 @@
     
 
     <link rel="stylesheet" href="./styles/index.css">
-    <link rel="stylesheet" href="/js/Particles/particles.css">
 </head>
 <body>
     <div class="particles"></div>
@@ -49,9 +48,11 @@
             <a href="#" class="nav-button bold btn border-2  uppercase bg-theme text-sub">Get Proposal</a>
         </nav>
     </header>
+    
     <main>
+
         <!-- Home Section -->
-        <section class="home flex">
+        <section class="home flex" data-sec="home">
             <div class="data">
                 <div class="text">
                     <h1 class="head">We are a Digital Marketing Company</h1>
@@ -73,7 +74,7 @@
             </div>
         </section>
         <!-- Features Section -->
-        <section class="features">
+        <section class="features hide" data-sec="features">
             <div class="section-head hide">
                 <h1 class="bold uppercase">WHAT DO WE OFFER</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -112,7 +113,7 @@
             </div>
         </section>
         <!-- About Section -->
-        <section class="about flex">
+        <section class="about flex" data-sec="about">
             <div class="section-head hide">
                 <h1 class="bold uppercase">WHY WORK WITH US</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -138,7 +139,7 @@
            
         </section>
         <!-- services Section -->
-        <section class="services">
+        <section class="services hide" data-sec="services">
             <div class="section-head hide">
                 <h1 class="bold uppercase">OUR Services</h1>
             </div>
@@ -187,9 +188,116 @@
             </div>
         </section>
         <!-- testemonials Section -->
-
+        <section class="testemonials hide" data-sec="testemonials">
+            <div class="section-head bold uppercase hide">
+                <h1>What Our Clients Say</h1>
+            </div>
+                <div class="arrows">
+                    <div class="arrow" id="prev"> <i class="fa fa-chevron-left"></i> </div>
+                    <div class="arrow" id="next"> <i class="fa fa-chevron-right"></i>  </div>
+                </div>
+                <ul class="slides testemonials-slider">
+                  
+                    <li class="slide-item border-2 bg-theme ">
+                        <div class="item" >
+                            <div class="stars"> 
+                                <i class="fa fa-star ben"></i>
+                                <i class="fa fa-star ben"></i>
+                                <i class="fa fa-star ben"></i>
+                                <i class="fa fa-star ben"></i>
+                                <i class="fa fa-star ben"></i>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, soluta earum! Fugit temporibus ullam repellat tempora voluptatum, possimus saepe debitis!</p>
+                            <div class="person">
+                                <img src="./images/man (1).jpg" alt="" width="100" height="100">
+                                <div class="person-info">
+                                    <p>UI & UX Designer</p>
+                                    <p>Jhon Doe</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="slide-item border-2 bg-theme ">
+                        <div class="item" >
+                            <div class="stars"> 
+                                <i class="fa fa-star ben"></i>
+                                <i class="fa fa-star ben"></i>
+                                <i class="fa fa-star ben"></i>
+                                <i class="fa fa-star ben"></i>
+                                <i class="fa fa-star ben"></i>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, soluta earum! Fugit temporibus ullam repellat tempora voluptatum, possimus saepe debitis!</p>
+                            <div class="person">
+                                <img src="./images/man (1).jpg" alt="" width="100" height="100">
+                                <div class="person-info">
+                                    <p>UI & UX Designer</p>
+                                    <p>Jhon Doe</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="slide-item border-2 bg-theme ">
+                        <div class="item" >
+                            <div class="stars"> 
+                                <i class="fa fa-star ben"></i>
+                                <i class="fa fa-star ben"></i>
+                                <i class="fa fa-star ben"></i>
+                                <i class="fa fa-star ben"></i>
+                                <i class="fa fa-star ben"></i>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, soluta earum! Fugit temporibus ullam repellat tempora voluptatum, possimus saepe debitis!</p>
+                            <div class="person">
+                                <img src="./images/man (1).jpg" alt="" width="100" height="100">
+                                <div class="person-info">
+                                    <p>UI & UX Designer</p>
+                                    <p>Jhon Doe</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="slide-item border-2 bg-theme ">
+                        <div class="item" >
+                            <div class="stars"> 
+                                <i class="fa fa-star ben"></i>
+                                <i class="fa fa-star ben"></i>
+                                <i class="fa fa-star ben"></i>
+                                <i class="fa fa-star ben"></i>
+                                <i class="fa fa-star ben"></i>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, soluta earum! Fugit temporibus ullam repellat tempora voluptatum, possimus saepe debitis!</p>
+                            <div class="person">
+                                <img src="./images/man (1).jpg" alt="" width="100" height="100">
+                                <div class="person-info">
+                                    <p>UI & UX Designer</p>
+                                    <p>Jhon Doe</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="slide-item border-2 bg-theme ">
+                        <div class="item" >
+                            <div class="stars"> 
+                                <i class="fa fa-star ben"></i>
+                                <i class="fa fa-star ben"></i>
+                                <i class="fa fa-star ben"></i>
+                                <i class="fa fa-star ben"></i>
+                                <i class="fa fa-star ben"></i>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, soluta earum! Fugit temporibus ullam repellat tempora voluptatum, possimus saepe debitis!</p>
+                            <div class="person">
+                                <img src="./images/man (1).jpg" alt="" width="100" height="100">
+                                <div class="person-info">
+                                    <p>UI & UX Designer</p>
+                                    <p>Jhon Doe</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                </ul>
+        </section>
         <!-- prircing Section -->
-        <section class="pricing">
+        <section class="pricing" data-sec="pricing">
             <div class="section-head bold uppercase hide">
                 <h1>GOOD PRICES & HIGH QUALITY</h1>
             </div>
@@ -198,14 +306,14 @@
                     <h1 class="item-head normal uppercase">Basic Plan</h1>
                     <div class="price normal uppercase text-theme">10$ / month</div>
             
-                    <ul class="benegits">
-                        <li class="ben-item"><span class="ben"></span> Benefit One</li>
-                        <li class="ben-item"><span class="ben"></span> Benefit Two</li>
-                        <li class="ben-item"> <span class="ben"></span>Benefit Three</li>
-                        <li class="ben-item no"> <span class="no-ben"></span>Benefit Four</li>
-                            <li class="ben-item no"> <span class="no-ben"></span>Benefit Five</li>
-                            <li class="ben-item no"><span class="no-ben"></span> Benefit Five</li>
-                            <li class="ben-item no"> <span class="no-ben"></span>Benefit Five Plus</li>
+                    <ul class="benefits">
+                        <li class="ben-item"> <i class="fa fa-star ben"></i> Benefit One</li>
+                        <li class="ben-item"><i class="fa fa-star ben"></i> Benefit Two</li>
+                        <li class="ben-item"> <i class="fa fa-star ben"></i>Benefit Three</li>
+                        <li class="ben-item no"><i class="fas fa-times-circle no-ben"></i> Benefit Four</li>
+                            <li class="ben-item no"><i class="fas fa-times-circle no-ben"></i>Benefit Five</li>
+                            <li class="ben-item no"><i class="fas fa-times-circle no-ben"></i> Benefit Five</li>
+                            <li class="ben-item no"><i class="fas fa-times-circle no-ben"></i> Benefit Five Plus</li>
                          <li class="ben-item"> <a href="#" class="price-button semi-bold btn border uppercase text-sub">Learn More</a>
 
 
@@ -215,16 +323,17 @@
                     <h1 class="item-head normal uppercase">Main Plan</h1>
                     <div class="price normal uppercase  text-theme">15$ / month</div>
              
-                    <ul class="benegits">
-                        <li class="ben-item"><span class="ben"></span> Benefit One</li>
-                        <li class="ben-item"><span class="ben"></span> Benefit Two</li>
-                        <li class="ben-item"> <span class="ben"></span>Benefit Three</li>
-                        <li class="ben-item "> <span class="ben"></span>Benefit Four</li>
-                        <li class="ben-item "><span class="ben"></span> Benefit Five</li>
-                            <li class="ben-item no"> <span class="no-ben"></span>Benefit Five</li>
-                            <li class="ben-item no"> <span class="no-ben"></span>Benefit Five Plus</li>
-                           <li class="ben-item"> <a href="#" class="price-button semi-bold btn border uppercase text-sub">Learn More</a>
-
+                    <ul class="benefits">
+                        <li class="ben-item"> <i class="fa fa-star ben"></i> Benefit One</li>
+                        <li class="ben-item"><i class="fa fa-star ben"></i> Benefit Two</li>
+                        <li class="ben-item"> <i class="fa fa-star ben"></i>Benefit Three</li>
+                        <li class="ben-item "><i class="fa fa-star ben"></i> Benefit Four</li>
+                        <li class="ben-item "><i class="fa fa-star ben"></i>Benefit Five</li>
+                        <li class="ben-item no"><i class="fas fa-times-circle no-ben"></i> Benefit Five</li>
+                        <li class="ben-item no"><i class="fas fa-times-circle no-ben"></i> Benefit Five Plus</li>
+                        <li class="ben-item"> <a href="#" class="price-button semi-bold btn border uppercase text-sub">Learn More</a>
+                    
+                    
                     </ul>
                     
                 </div>
@@ -232,29 +341,40 @@
                     <h1 class="item-head normal uppercase">Main Plus Plan</h1>
                     <div class="price normal uppercase  text-theme">50$ / month</div>
             
-                    <ul class="benegits">
-                        <li class="ben-item"><span class="ben"></span> Benefit One</li>
-                        <li class="ben-item"><span class="ben"></span> Benefit Two</li>
-                        <li class="ben-item"><span class="ben"></span> Benefit Three</li>
-                        <li class="ben-item "><span class="ben"></span> Benefit Four</li>
-                        <li class="ben-item "> <span class="ben"></span>Benefit Four Plus</li>
-                        <li class="ben-item x"> <span class="ben-x"></span>Benefit Five</li>
-                        <li class="ben-item x"> <span class="ben-x"></span>Benefit Five Plus</li>
-                        <li class="ben-item"> <a href="#" class="price-button semi-bold btn border uppercase text-sub">Learn More</a>
- </li>
-                    </ul>
+                <ul class="benefits">
+                    <li class="ben-item"> <i class="fa fa-star ben"></i> Benefit One</li>
+                    <li class="ben-item"><i class="fa fa-star ben"></i> Benefit Two</li>
+                    <li class="ben-item"> <i class="fa fa-star ben"></i>Benefit Three</li>
+                    <li class="ben-item "><i class="fa fa-star ben"></i>Benefit Four</li>
+                    <li class="ben-item "><i class="fa fa-star ben"></i>Benefit Five</li>
+                    <li class="ben-item x"><i class="fas fa-plus-circle ben-x"></i>Benefit Five</li>
+                    <li class="ben-item x"><i class="fas fa-plus-circle ben-x"></i> Benefit Five Plus</li>
+                    <li class="ben-item"> <a href="#" class="price-button semi-bold btn border uppercase text-sub">Learn More</a>
+                
+                </ul>
 
                 </div>
             </div>
         </section>
 
-        <section class="blog">
+        <section class="blog" data-sec="blog">
             <div class="section-head bold uppercase hide">
                 <h1>Our Blog</h1>
             </div>
             <div class="blog-container">
                 <div class="blog-item hide">
                     <img src="./images/bg.jpg" class="border-2  img-width" alt="">
+                    <div class="info">
+                        <div class="item">
+                            <i class="fas fa-user"></i> <span>By: <span class="text"> Person </span></span>
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-tag"></i> <span>Category: <span class="text"> Development , Design </span>
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-table"></i> <span>At: <span class="text"> 10 Feb , 2020 </span>
+                        </div>
+                    </div>
                     <div class="data">
                         <span class="writer"></span>
                         <span class="data"></span>
@@ -266,19 +386,32 @@
                 </div>
                 <div class="blog-item hide">
                     <img src="./images/bg.jpg" class="border-2  img-width" alt="">
+                    <div class="info">
+                        <div class="item">
+                            <i class="fas fa-user"></i> <span>By: <span class="text"> Person </span></span>
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-tag"></i> <span>Category: <span class="text"> Development , Design </span>
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-table"></i> <span>At: <span class="text"> 10 Feb , 2020 </span>
+                        </div>
+                    </div>
                     <div class="data">
                         <span class="writer"></span>
                         <span class="data"></span>
                     </div>
                     <h1>Lorem ipsum dolor sit amet.</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis illo nulla tenetur quaerat doloribus, molestias delectus ratione vero sapiente? Perferendis distinctio qui dolore aliquid rem excepturi. Nihil qui voluptatem sed.</p>
-                    <a href="#" class="about-button bold btn border uppercase bg-theme text-sub">Read More</a>
+                    <a href="#" class="about-button bold btn border  uppercase bg-theme text-sub">Read More</a>
 
                 </div>
+               
+          
             </div>
         </section>
 
-        <section class="faqs ">
+        <section class="faqs" data-sec="faqs">
             <div class="faqs-head hide">
                 <h1 class="normal uppercase">Frequently asked questions</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, cupiditate dignissimos aliquid cum minus reprehenderit nobis. Sunt, rerum. Repudiandae officiis necessitatibus iure nesciunt ipsum et ab accusamus quidem dolorem voluptatibus.</p>
@@ -325,7 +458,7 @@
             </form>
         </div>
 
-
+     
         <footer class="border">
             <div class="footer-container ">
                 <ul class="info">
@@ -362,36 +495,42 @@
 
     </main>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
-    <script rel="stylesheet" src="/js/Particles/particles.js"></script>
     <script src="./js/index.js"></script>
     <script>
-        particals(100 , 20000 , "#26cffe"  ,"#26cffe");
-       new Splide('.splide-features', {
-            perPage: 3,
-            breakpoints: {
-                '840': {
-                    perPage: 2,
-                    gap: '1rem',
-                },
-                '480': {
-                    perPage: 1,
-                    gap: '1rem',
-                },
-            }
-        }).mount();
-       new Splide('.splide-services', {
-            perPage: 3,
-            breakpoints: {
-                '840': {
-                    perPage: 2,
-                    gap: '1rem',
-                },
-                '480': {
-                    perPage: 1,
-                    gap: '1rem',
-                },
-            }
-        }).mount();
+        document.addEventListener("DOMContentLoaded" , e => {
+            //  new Splide('.somekindaslider', {
+            //     focus: 2,
+            //     perPage: 2,
+            // }).mount();
+
+            new Splide('.splide-features', {
+                perPage: 3,
+                breakpoints: {
+                    '840': {
+                        perPage: 2,
+                        gap: '1rem',
+                    },
+                    '480': {
+                        perPage: 1,
+                        gap: '1rem',
+                    },
+                }
+            }).mount();
+            new Splide('.splide-services', {
+                perPage: 3,
+                breakpoints: {
+                    '840': {
+                        perPage: 2,
+                        gap: '1rem',
+                    },
+                    '480': {
+                        perPage: 1,
+                        gap: '1rem',
+                    },
+                }
+            }).mount();
+        } )
+       
     </script>
 </body>
 </html>
