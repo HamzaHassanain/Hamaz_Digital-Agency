@@ -5,6 +5,9 @@ footer {
     color: $sub_color !important;
   }
   .footer-container {
+    i {
+      margin-right: 0.4rem;
+    }
     width: 80%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;

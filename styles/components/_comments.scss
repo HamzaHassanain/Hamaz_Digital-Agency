@@ -1,0 +1,77 @@
+.comments {
+  width: 100%;
+  .comment-body {
+    margin: 0.8rem auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .comment-info {
+      .name {
+        font-size: 1.2rem;
+      }
+      .date {
+        font-size: 1rem;
+      }
+      .btn {
+        padding: 0.1rem 0.6rem;
+      }
+    }
+    p.comment-text {
+      padding-bottom: 0.8rem !important;
+    }
+    .comment-img {
+      width: 68px;
+      height: 68px;
+      border-radius: 100%;
+      margin-right: 2rem;
+    }
+    &.replay {
+      padding-left: 2rem;
+    }
+  }
+  .comment-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    input,
+    button,
+    textarea {
+      outline: none;
+      width: 100%;
+
+      font-size: 1.2rem;
+      margin-top: 0.8rem;
+    }
+    input,
+    textarea {
+      border: 2px solid $main_color;
+      padding: 1rem;
+      background-color: $sub_color;
+      cursor: text;
+      &:hover {
+        color: $text_color;
+      }
+    }
+  }
+  @media (max-width: 560px) {
+    padding: 1rem;
+
+    .comment-body {
+      flex-direction: column;
+      align-items: flex-start;
+
+      justify-content: flex-start;
+      &.replay {
+        padding-left: 3rem;
+      }
+    }
+  }
+}

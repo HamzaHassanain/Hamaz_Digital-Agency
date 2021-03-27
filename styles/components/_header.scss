@@ -5,32 +5,7 @@ header {
   z-index: 100;
   width: 100%;
   transition: 0.4s;
-  &:not(.home-header) {
-    .menu-link,
-    .menu-item {
-      color: $sub_color;
-    }
-
-    &.active {
-      background: $sub_color;
-      .navbar {
-        .menu-toggler {
-          .bar {
-            background: $text_color;
-          }
-        }
-        .menu-link,
-        .menu-item {
-          color: $text_color;
-        }
-        .menu-item {
-          &:hover .menu-link {
-            color: $sub_color;
-          }
-        }
-      }
-    }
-  }
+  background: $sub_color;
   .navbar {
     .menu-toggler {
       .bar {
@@ -117,9 +92,9 @@ header {
     .menu-item {
       background: none;
     }
-    .menu-link {
-      color: $sub_color !important;
-    }
+    // .menu-link {
+    //   color: $sub_color !important;
+    // }
   }
   @media (max-width: 1440px) {
     .navbar {
@@ -143,16 +118,16 @@ header {
     }
   }
   @media (max-width: 1024px) {
-    .menu-link,
-    .menu-item {
-      color: $text_color;
-    }
-    &.active {
-      .menu-link,
-      .menu-item {
-        color: $text_color;
-      }
-    }
+    // .menu-link,
+    // .menu-item {
+    //   color: $text_color;
+    // }
+    // &.active {
+    //   .menu-link,
+    //   .menu-item {
+    //     color: $text_color;
+    //   }
+    // }
     .navbar {
       .menu-toggler {
         display: inline;
@@ -173,23 +148,23 @@ header {
           max-height: 80vh;
         }
         .menu-item {
-          background-color: $sub_color;
+          // background-color: $sub_color;
 
           font-size: 1.1rem;
           padding: 1rem;
           text-align: center;
           width: 100%;
 
-          .menu-link {
-            color: $text_color;
-          }
-          &:hover {
-            color: $sub_color !important;
-            background: $main_color;
-            .menu-link {
-              color: $sub_color;
-            }
-          }
+          // .menu-link {
+          //   color: $text_color;
+          // }
+          // &:hover {
+          //   color: $sub_color !important;
+          //   background: $main_color;
+          //   .menu-link {
+          //     color: $sub_color;
+          //   }
+          // }
         }
         .dropdown {
           width: 100%;
@@ -203,22 +178,22 @@ header {
           width: 80vw;
           left: 10%;
           margin: auto;
-          background: $main_color !important;
+          // background: $main_color !important;
           background: none;
           .menu-item {
             .menu-link {
-              color: $sub_color !important;
+              // color: $sub_color !important;
             }
             background: none;
           }
         }
-        .active {
-          color: $sub_color !important;
-          background: $main_color;
-          .menu-link {
-            color: $sub_color;
-          }
-        }
+        // .active {
+        //   color: $sub_color !important;
+        //   background: $main_color;
+        //   .menu-link {
+        //     color: $sub_color;
+        //   }
+        // }
       }
 
       .nav-button {
@@ -243,5 +218,36 @@ header {
         padding: 0.5rem 1.3rem;
       }
     }
+  }
+}
+header.animate {
+  background: none !important;
+}
+header.animate .navbar .menu-toggler .bar {
+  background: $sub_color !important;
+}
+header.animate.active {
+  background: $sub_color !important;
+}
+header.animate.active .navbar .menu-toggler .bar {
+  background: $text_color !important;
+}
+@media (min-width: 1024px) {
+  header.animate .navbar .menu-item .menu-link,
+  header.animate .navbar .dropdown-openner {
+    color: $sub_color !important;
+  }
+  header.animate.active .navbar .menu-item .menu-link,
+  header.animate.active .navbar .dropdown-openner {
+    color: $text_color !important;
+    &:hover {
+      color: $sub_color !important;
+    }
+  }
+  header.animate.active .navbar .menu-item.active .menu-link {
+    color: $sub_color !important;
+  }
+  header.animate.active .navbar .dropdown .menu-link {
+    color: $sub_color !important;
   }
 }

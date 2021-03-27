@@ -1,71 +1,20 @@
 @import "./Vars";
 @import "./Utilities";
 @import "./components/header";
+@import "./components/welcome";
+
 .welcome {
-  padding-top: 10rem;
-  width: 100%;
-  min-height: 40vh;
   background: linear-gradient(rgba(0, 0, 0, 0.589), rgba(0, 0, 0, 0.575)),
-    url("../images/bg2.jpg") bottom center fixed;
-  &.team {
-    background: linear-gradient(rgba(0, 0, 0, 0.589), rgba(0, 0, 0, 0.575)),
-      url("../images/bg5.jpg") center center fixed;
-  }
-  .section-head {
-    line-height: 1.6;
-    h1 {
-      font-size: 2.6rem;
-    }
-    p {
-      padding-bottom: 2rem;
-      font-size: 1.1rem;
-    }
-    width: 60%;
-    margin: auto;
-  }
-  @media (max-height: 1000px) {
-    min-height: 70vh;
-  }
-  @media (max-height: 600px) {
-    min-height: 110vh;
-  }
-  @media (max-width: 1280px) {
-    .section-head {
-      line-height: 1.6;
-      h1 {
-        font-size: 2.2rem;
-      }
-      p {
-        padding-bottom: 2rem;
-        font-size: 1rem;
-      }
-      width: 80%;
-      margin: auto;
-    }
-  }
-  @media (max-width: 680px) {
-    .section-head {
-      line-height: 1.6;
-      h1 {
-        font-size: 2rem;
-      }
-      p {
-        padding-bottom: 2rem;
-        font-size: 0.9rem;
-      }
-      width: 90%;
-      margin: auto;
-    }
-  }
-  @media (max-width: 480px) {
-    min-height: 65vh;
-    padding-top: 8rem;
-  }
-  @media (max-height: 480px) {
-    min-height: 120vh;
+    url("../images/bg2.jpg") center center fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  p {
+    padding-bottom: 2rem;
+    padding-top: 2rem;
   }
 }
 .about {
+  overflow: hidden;
   margin: 3rem auto;
   width: 100%;
   .item {
@@ -75,15 +24,36 @@
     justify-content: center;
     grid-template-columns: 1fr 1fr;
     .text {
+      transform: translateX(0);
+      opacity: 1;
+      transition: 0.6s;
+      &.hide {
+        transform: translateX(-100px);
+        opacity: 0;
+      }
       padding: 2rem 3rem;
       h1 {
         margin-bottom: 2rem;
       }
+      p {
+        font-size: 1.2rem;
+      }
+    }
+    img {
+      &.hide {
+        transform: translateX(100px);
+        opacity: 0;
+      }
     }
   }
-  @media (max-width: 1000px) {
+  @media (max-width: 1024px) {
     .item {
       grid-template-columns: 1fr;
+      .text {
+        p {
+          font-size: 1rem;
+        }
+      }
       .text {
         &:first-child {
           order: 2;

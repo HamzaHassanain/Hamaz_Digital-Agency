@@ -1,4 +1,4 @@
-const header = document.querySelector("header:not(.home-header)")
+const header = document.querySelector(".animate")
 const menu = document.querySelector(".nav-menu")
 const toggler = document.querySelector(".menu-toggler")
 
@@ -18,11 +18,13 @@ document.querySelector(".dropdown-openner").addEventListener("click" , e => {
 
 
 window.addEventListener("scroll" , e => {
-    if(window.scrollY > 200) {
-      header.classList.add("active")
-    }
-    if(window.scrollY < 200) {
-       header.classList.remove("active")
+    if(header) {
+        if(window.scrollY > 200) {
+        header.classList.add("active")
+        }
+        if(window.scrollY < 200) {
+        header.classList.remove("active")
+        }
     }
     const items = document.querySelectorAll(".hide")    
     items.forEach(item => {
