@@ -1,6 +1,12 @@
+.testemonials-container {
+  width: 100%;
+  overflow: hidden;
+}
 .testemonials {
   transition: 0.8s;
   opacity: 1;
+  margin: 4rem auto;
+  position: relative;
   &.hide {
     transform: translateY(200px);
     opacity: 0;
@@ -10,10 +16,6 @@
   h1 {
     color: $text_color;
   }
-  transition: 0.4s;
-  margin: 4rem auto;
-  position: relative;
-  overflow: hidden;
   .arrows {
     width: 100%;
     color: $text_color;

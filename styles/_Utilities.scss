@@ -157,3 +157,51 @@ p {
     flex-direction: column;
   }
 }
+
+.progress-bar-container h1 {
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+.progress-bar-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.progress-bar-container .container {
+  text-align: left;
+}
+.progress-bar-container .bar {
+  width: 280px;
+  height: 15px;
+  background-color: rgb(201, 201, 201);
+  border-radius: 30px;
+  position: relative;
+}
+.progress-bar-container .fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 0%;
+  height: 15px;
+  background-color: $main_color;
+  box-shadow: 0px 0px 40px 0px $main_color;
+  transition: 20ms;
+  border-radius: 30px;
+  animation-name: glow;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes glow {
+  from {
+    box-shadow: 0px 0px 40px 0px $main_color;
+  }
+  to {
+    box-shadow: 0px 0px 40px 20px $main_color;
+  }
+}

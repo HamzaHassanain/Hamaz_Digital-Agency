@@ -50,24 +50,35 @@
   }
   @media (max-width: 1024px) {
     .blog-container {
-      text-align: center;
-      grid-template-columns: 1fr;
-      h1 {
-        margin: 1rem auto;
-      }
-      p {
-        padding-bottom: 1.5rem;
+      .blog-item {
+        .info {
+          text-align: left;
+          align-items: flex-start;
+          flex-direction: column;
+          .item:first-child {
+            //padding-left: 1rem;
+          }
+        }
       }
       img {
-        width: 70%;
-        margin: auto;
+        width: 95%;
       }
     }
   }
-  @media (max-width: 600px) {
+  @media (max-width: 800px) {
     width: 90%;
-
     .blog-container {
+      grid-template-columns: 1fr;
+      .blog-item {
+        .info {
+          text-align: left;
+          align-items: flex-start;
+          flex-direction: column;
+          .item:first-child {
+            //padding-left: 1rem;
+          }
+        }
+      }
       img {
         width: 95%;
       }
