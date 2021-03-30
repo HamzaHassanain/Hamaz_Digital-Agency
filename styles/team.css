@@ -172,6 +172,7 @@ p {
 }
 
 .btn-inverted {
+  padding: 0.7rem 1.8rem;
   border: 2px solid white;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -205,6 +206,63 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+.info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 0.5rem 0rem;
+}
+
+.info-item {
+  margin: auto 1rem;
+}
+
+.info-item:first-child {
+  margin: auto 0rem;
+}
+
+@media (max-width: 768px) {
+  .info {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 0.8rem;
+  }
+  .info .info-item {
+    padding: 0;
+    margin: 0rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .info {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 0.8rem;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -603,7 +661,6 @@ header.animate.active .navbar .menu-toggler .bar {
 @media (max-width: 480px) {
   .welcome {
     min-height: 65vh;
-    padding-top: 8rem;
   }
 }
 

@@ -172,6 +172,7 @@ p {
 }
 
 .btn-inverted {
+  padding: 0.7rem 1.8rem;
   border: 2px solid white;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -205,6 +206,63 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+.info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 0.5rem 0rem;
+}
+
+.info-item {
+  margin: auto 1rem;
+}
+
+.info-item:first-child {
+  margin: auto 0rem;
+}
+
+@media (max-width: 768px) {
+  .info {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 0.8rem;
+  }
+  .info .info-item {
+    padding: 0;
+    margin: 0rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .info {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 0.8rem;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -1339,8 +1397,8 @@ header.animate.active .navbar .menu-toggler .bar {
 
 .pricing .prices .item {
   opacity: 1;
-  -webkit-transition: 0.7s ease-in;
-  transition: 0.7s ease-in;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
   -webkit-transform: translateY(0);
           transform: translateY(0);
   width: 100%;
@@ -1403,10 +1461,8 @@ header.animate.active .navbar .menu-toggler .bar {
 .pricing .prices .item.important {
   background: #26cffe;
   font-size: 1.1rem;
-  -webkit-transition: 1s;
-  transition: 1s;
-  -webkit-transition-delay: 0.4s;
-          transition-delay: 0.4s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .pricing .prices .item.important h1 {

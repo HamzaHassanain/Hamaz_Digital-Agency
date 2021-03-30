@@ -131,6 +131,8 @@ p {
   }
 }
 .btn-inverted {
+  padding: 0.7rem 1.8rem;
+
   border: 2px solid $sub_color;
   transition: 0.4s;
 
@@ -152,6 +154,39 @@ p {
   flex-direction: row;
 }
 
+.info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0.5rem 0rem;
+}
+.info-item {
+  &:first-child {
+    margin: auto 0rem;
+  }
+  margin: auto 1rem;
+}
+@media (max-width: 768px) {
+  .info {
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    font-size: 0.8rem;
+
+    .info-item {
+      padding: 0;
+      margin: 0rem;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .info {
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    font-size: 0.8rem;
+  }
+}
 @media (max-width: 1024px) {
   .flex-column-1024 {
     flex-direction: column;

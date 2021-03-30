@@ -1,4 +1,6 @@
 
+const footer = document.querySelector("footer .info")
+footer.classList = [] //instaed of going to each page and removing it
 
 
 const header = document.querySelector(".animate")
@@ -117,3 +119,5 @@ slides_container.addEventListener("mouseup" , e => {
        }
     
 })
+
+
